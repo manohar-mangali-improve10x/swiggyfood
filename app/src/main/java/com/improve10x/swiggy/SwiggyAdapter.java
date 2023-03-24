@@ -7,8 +7,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 public class SwiggyAdapter extends RecyclerView.Adapter<SwiggyViewHolder> {
     SwiggyItems[] items;
+    SwiggyItemsOnClick click;
 public SwiggyAdapter(SwiggyItems[]swiggyItems){
     items = swiggyItems;
 }
@@ -24,14 +27,16 @@ public SwiggyAdapter(SwiggyItems[]swiggyItems){
     @Override
     public void onBindViewHolder(@NonNull SwiggyViewHolder holder, int position) {
         SwiggyItems item1 =  items[position];
-        holder.titleTxt.setText(item1.title);
-        holder.descriptionTxt.setText(item1.description);
-        holder.silverTxt.setText(item1.silver);
-        holder.chatTxt.setText(item1.chat);
-        holder.rotationTxt.setText(item1.rotation);
-        holder.favoriteTxt.setText(item1.favorite);
-        Picasso.get().load(item1.photo).into(holder.photoIv);
+        holder.itemTxt.setText(item1.item);
+        holder.rateTxt.setText(item1.rate);
+        holder.foodStyleTxt.setText(item1.foodStyle);
+        holder.timeTxt.setText(item1.time);
+        holder.discountTxt.setText(item1.discount);
+        Picasso.get().load(item1.poster).into(holder.posterIv);
+        holder.itemView.setOnClickListener(v -> {
+            click.swiggyItemOnClickListener(item1);
 
+        });
     }
 
     @Override
