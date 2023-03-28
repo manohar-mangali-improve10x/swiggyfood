@@ -2,7 +2,6 @@ package com.improve10x.swiggy;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -23,7 +22,7 @@ public class Swiggy6Activity extends AppCompatActivity {
     }
 
     private void initViews() {
-        swiggy6Rv = findViewById(R.id.swiggy6_rv);
+        swiggy6Rv = findViewById(R.id.swiggy2_rv);
 
     }
 

@@ -6,43 +6,50 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:orientation="vertical"
-    tools:context=".Swiggy6Activity">
+    tools:context=".Swiggy2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="35dp"
-            android:layout_height="38dp"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/swiggy" />
-
-        <TextView
-            android:id="@+id/textView"
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:queryHint="Sharamma" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Swiggy"
-            android:textAllCaps="true"
-            android:textColor="#FD835C"
-            android:textSize="24sp"
+            android:text="Al Ajwain"
+            android:textColor="#000000"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <TextView
+            android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/ic_round_grid_view_24" />
+            android:text="4.3" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/ic_baseline_menu_24" />
+            app:srcCompat="@drawable/ic_baseline_star_24" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Mins" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -66,7 +73,8 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:backgroundTint="#C4FF5722"
-            android:text="All"
+            android:text="Restarents"
+            android:textAllCaps="false"
             android:textSize="16sp"
             app:cornerRadius="12dp" />
 
@@ -77,24 +85,12 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:backgroundTint="#A4FFFFFF"
-            android:text="On offer"
+            android:text="Dishes"
             android:textAllCaps="false"
             android:textColor="#000000"
-            android:textSize="14sp"
+            android:textSize="16sp"
             app:cornerRadius="12dp" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#86FFFFFF"
-            android:text="Favourites"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:cornerRadius="12dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -154,27 +150,18 @@
             app:srcCompat="@drawable/ic_baseline_search_24" />
 
         <LinearLayout
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/ic_baseline_circle_24"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="25"
-                android:textColor="#F2FFFFFF"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mins"
-                android:textColor="#F2FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginBottom="12dp"
+                app:srcCompat="@drawable/ic_baseline_shopping_basket_24" />
         </LinearLayout>
 
         <ImageView
@@ -191,4 +178,5 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_baseline_person_24" />
     </LinearLayout>
+
 </LinearLayout>
